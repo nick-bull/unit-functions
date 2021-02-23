@@ -1,0 +1,42 @@
+{
+  "name": "<<PACKAGE_NAME>>",
+  "description": "<<DESCRIPTION>>",
+  "version": "0.0.0",
+  "author": "Nick Bull <nick@bull.dev>",
+  "license": "ISC",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nick-bull/<<PKGNAME>>.git"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "dev": "node --es-module-specifier-resolution=node src/index.js",
+    "start": "node lib/index.js",
+    "prepublish": "npm run build",
+    "test": "jest",
+    "eslint": "npx eslint **/src/**/*.js",
+    "eslint:files": "npm run eslint | grep ^[\\w/].*\\.js",
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.0",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
+  }
+}
