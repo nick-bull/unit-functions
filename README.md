@@ -1,5 +1,15 @@
+A collection of unit functions
 
-# Usage
+## Installation
 
-1. Set project variables in `./initialise/config.txt`
-2. Run `./initialise/replace.sh`; this will configure the package and clean up `./initialise`
+```
+npm i @nick-bull/unit-functions
+```
+
+## Usage
+
+```
+import {...} from 'nick-bull/unit-functions'
+
+...
+```
